@@ -2,15 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
-# План
-# 1. выяснить кол-во страниц
-# 2. сформировать список урлов на странице выдачи
-# 3. собрать данные
-#
 
 def get_html(url):
-	r = requests.get(url)
-	return r.text
+	return requests.get(url).text
 
 
 def write_csv(data):
